@@ -11,7 +11,83 @@
       content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        text-align: center;
+        background-color: #21222e;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin: 0;
+      }
+      li::selection {
+        background: rgba(255, 190, 142, 0.77);
+      }
+      h1 {
+        color: rgba(61, 43, 199, 0.83);
+        font-weight: 600;
+        text-shadow: 1px 1px grey;
+      }
+      li {
+        color: aliceblue;
+        list-style: none;
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 3px;
+        line-height: 1.8;
+        margin: 60px;
+      }
+      li.trzecia {
+        color: aliceblue;
+        font-size: 15px;
+        letter-spacing: 4px;
+        line-height: 1.5;
+        margin-left: 70px;
+        margin-right: 70px;
+      }
+      li.opcje {
+        float: left;
+        display: block;
+        list-style-type: none;
+        background-color: #333;
+        margin: 0 !important;
+        color: aliceblue;
+        font-size: 20px;
+        padding: 10px 16px;
+      }
+      li.podkr {
+        text-decoration: underline;
+        letter-spacing: 4px;
+      }
+      li.opcje:hover {
+        background-color: #f4ccc0;
+      }
+      ul.nav {
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+        margin: 0 !important;
+        background: #333;
+        box-shadow: 7px 8px 12px 0px black;
+      }
+      div {
+        padding: 0;
+        /* padding-inline-start: 0 !important; */
+      }
+      a:link {
+        text-decoration: none;
+        color: blanchedalmond;
+      }
+      a:visited {
+        color: rgba(255, 255, 255, 0.83);
+      }
+      a:hover {
+        color: rgba(61, 43, 199, 0.83);
+      }
+      a:active {
+        color: #9191c6;
+      }
+    </style>
     <title>Programowanie w Internecie</title>
     <style media="screen">
       #fb-btn {
@@ -31,6 +107,80 @@
     </style>
   </head>
   <body>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: "2554455168114808",
+          xfbml: true,
+          version: "v3.3"
+        });
+        FB.AppEvents.logPageView();
+      };
+
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+
+      function statusChangeCallback(response) {
+        if (response.status === "connected") {
+          console.log("Logged in and authenticated");
+          setElements(true);
+          testAPI();
+        } else {
+          console.log("Not authenticated");
+          setElements(false);
+        }
+      }
+      function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      }
+      function testAPI() {
+        FB.api("/me?fields=name,email", function(response) {
+          if (response && !response.error) {
+            console.log(response);
+            buildProfile(response);
+          }
+        });
+      }
+
+      function buildProfile(user) {
+        let profile = `
+            <h3 id="witaj">Witaj ${user.name}!</h3>
+            <ul class="list-group">
+              <li class="list-group-item">Email: ${user.email}</li>
+            </ul>
+          `;
+        document.getElementById("profile").innerHTML = profile;
+      }
+      function setElements(isLoggedIn) {
+        if (isLoggedIn) {
+          document.getElementById("logout").style.display = "block";
+          document.getElementById("profile").style.display = "block";
+          document.getElementById("fb-btn").style.display = "none";
+          document.getElementById("heading").style.display = "none";
+        } else {
+          document.getElementById("logout").style.display = "none";
+          document.getElementById("profile").style.display = "none";
+          document.getElementById("fb-btn").style.display = "block";
+          document.getElementById("heading").style.display = "block";
+        }
+      }
+      function logout() {
+        FB.logout(function(response) {
+          setElements(false);
+        });
+      }
+    </script>
     <br /><br /><br /><br />
     <nav class="navbar navbar-default">
       <div class="container">
@@ -59,6 +209,5 @@
       <h3 id="heading">Zaloguj się</h3>
       <div id="profile"></div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>

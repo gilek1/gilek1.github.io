@@ -45,11 +45,11 @@ function testAPI() {
 
 function buildProfile(user) {
   let profile = `
-      <h3 id="witaj">Witaj ${user.name}!</h3>
-      <ul class="list-group">
-        <li class="list-group-item">Email: ${user.email}</li>
-      </ul>
-    `;
+        <h3 id="witaj">Witaj ${user.name}!</h3>
+        <ul class="list-group">
+          <li class="list-group-item">Email: ${user.email}</li>
+        </ul>
+      `;
   document.getElementById("profile").innerHTML = profile;
 }
 function setElements(isLoggedIn) {

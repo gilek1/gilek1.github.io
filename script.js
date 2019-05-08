@@ -43,12 +43,24 @@ function testAPI() {
   });
 }
 
+{
+  /* <h3>Cześć ${user.name}!</h3>
+        <h3>Twoje ID: ${user.id}</h3>
+        <h3>Twój email: ${user.email}</h3> */
+}
+
 function buildProfile(user) {
   let profile = `
-        <h3>Cześć ${user.name}!</h3>
-        <h3>Twoje ID: ${user.id}</h3>
-        <h3>Twój email: ${user.email}</h3>
-        <div><img src="${user.picture.data.url}"/></div>
+  <ul class="list-group">
+        <li class="list-group-item">Imię: ${user.first_name}</li>
+        <li class="list-group-item">Nazwisko: ${user.last_name}</li>
+        <li class="list-group-item">ID: ${user.id}</li>
+        <li class="list-group-item">Email: ${user.email}</li>
+        <li class="list-group-item">Zdjęcie profilowe: <img src="${
+          user.picture.data.url
+        }"/></li>
+      </ul>
+        
       `;
   document.getElementById("profile").innerHTML = profile;
 }

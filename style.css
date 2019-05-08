@@ -45,22 +45,22 @@ h3 {
   color: #6b6e70;
   margin-bottom: 20px;
 }
-/* li {
+li {
   list-style: none;
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 3px;
   line-height: 1.8;
   margin: 60px;
-} */
-/* li.trzecia {
+}
+li.trzecia {
   font-size: 15px;
   letter-spacing: 4px;
   line-height: 1.5;
   margin-left: 70px;
   margin-right: 70px;
-} */
-/* li.opcje {
+}
+li.opcje {
   float: left;
   display: block;
   list-style-type: none;
@@ -68,15 +68,15 @@ h3 {
   margin: 0 !important;
   font-size: 20px;
   padding: 10px 16px;
-} */
+}
 
-/* ul.nav {
+ul.nav {
   list-style-type: none;
   padding: 0;
   overflow: hidden;
   position: relative;
   margin: 0 !important;
-} */
-/* div {
+}
+div {
   padding: 0;
-} */
+}

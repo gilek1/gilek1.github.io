@@ -45,8 +45,9 @@ function testAPI() {
 
 function buildProfile(user) {
   let profile = `
-        <h3 id="witaj">Cześć ${user.name}!</h3>
-        <h3 id="witaj">Twój email ${user.email}!</h3>
+        <h3>Cześć ${user.name}!</h3>
+        <h3>Twoje ID: ${user.id}</h3>
+        <h3>Twój email: ${user.email}</h3>
       `;
   document.getElementById("profile").innerHTML = profile;
 }
@@ -55,12 +56,12 @@ function setElements(isLoggedIn) {
     document.getElementById("logout").style.display = "block";
     document.getElementById("profile").style.display = "block";
     document.getElementById("fb-btn").style.display = "none";
-    document.getElementById("heading").style.display = "none";
+    // document.getElementById("heading").style.display = "none";
   } else {
     document.getElementById("logout").style.display = "none";
     document.getElementById("profile").style.display = "none";
     document.getElementById("fb-btn").style.display = "block";
-    document.getElementById("heading").style.display = "block";
+    // document.getElementById("heading").style.display = "block";
   }
 }
 function logout() {

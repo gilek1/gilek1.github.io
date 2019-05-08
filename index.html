@@ -18,14 +18,19 @@
     </style>
   </head>
   <body>
+      <nav>
+          <ul>
+            <li><a class="omnie" href="http://mateuszgil.cba.pl/">Strona Główna</a></li>
+          </ul>
+        </nav>
     <script type="text/javascript" src="script.js"></script>
     <h2>Logowanie za pomocą Facebooka</h2>
     <nav class="navbar navbar-default">
       <div class="container">
         <div id="navbar" class="collapse navbar-collapse">
-          <a href="http://mateuszgil.cba.pl/">Strona Główna</a></li>
+          
           <ul class="nav navbar-nav navbar-right">
-            <li><a id="logout" href="#" onclick="logout()">Wyloguj</a></li>
+            <li><a id="logout" href="#" onclick="logout()"></a></li>
             <fb:login-button
               id="fb-btn"
               scope="public_profile,email"
@@ -38,7 +43,7 @@
     </nav>
 
     <div class="container">
-      <h3 id="heading">Zaloguj się</h3>
+      <h3 id="heading"></h3>
       <div id="profile"></div>
     </div>
   </body>

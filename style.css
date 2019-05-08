@@ -27,7 +27,7 @@ nav a {
   margin-right: auto;
 }
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 h2 {
@@ -37,7 +37,6 @@ h2 {
   margin-bottom: 20px;
 }
 li {
-  color: aliceblue;
   list-style: none;
   font-weight: bold;
   font-size: 20px;
@@ -46,7 +45,6 @@ li {
   margin: 60px;
 }
 li.trzecia {
-  color: aliceblue;
   font-size: 15px;
   letter-spacing: 4px;
   line-height: 1.5;
@@ -59,17 +57,10 @@ li.opcje {
   list-style-type: none;
   background-color: #333;
   margin: 0 !important;
-  color: aliceblue;
   font-size: 20px;
   padding: 10px 16px;
 }
-li.podkr {
-  text-decoration: underline;
-  letter-spacing: 4px;
-}
-li.opcje:hover {
-  background-color: #f4ccc0;
-}
+
 ul.nav {
   list-style-type: none;
   padding: 0;

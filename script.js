@@ -21,11 +21,9 @@ window.fbAsyncInit = function() {
 
 function statusChangeCallback(response) {
   if (response.status === "connected") {
-    console.log("Logged in and authenticated");
     setElements(true);
     testAPI();
   } else {
-    console.log("Not authenticated");
     setElements(false);
   }
 }
@@ -37,7 +35,6 @@ function checkLoginState() {
 function testAPI() {
   FB.api("/me?fields=name,email", function(response) {
     if (response && !response.error) {
-      console.log(response);
       buildProfile(response);
     }
   });
@@ -53,19 +50,10 @@ function buildProfile(user) {
 }
 function setElements(isLoggedIn) {
   if (isLoggedIn) {
-    document.getElementById("logout").style.display = "block";
     document.getElementById("profile").style.display = "block";
     document.getElementById("fb-btn").style.display = "none";
-    // document.getElementById("heading").style.display = "none";
   } else {
-    document.getElementById("logout").style.display = "none";
     document.getElementById("profile").style.display = "none";
     document.getElementById("fb-btn").style.display = "block";
-    // document.getElementById("heading").style.display = "block";
   }
-}
-function logout() {
-  FB.logout(function(response) {
-    setElements(false);
-  });
 }

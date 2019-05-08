@@ -22,6 +22,9 @@ nav li {
   flex-basis: 50%;
 }
 
+.przycisk {
+  text-align: center;
+}
 nav a {
   display: block;
   flex-grow: 1;
@@ -52,38 +55,3 @@ h3 {
   color: #6b6e70;
   margin-bottom: 20px;
 }
-/* li {
-  list-style: none;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 3px;
-  line-height: 1.8;
-  margin: 60px;
-}
-li.trzecia {
-  font-size: 15px;
-  letter-spacing: 4px;
-  line-height: 1.5;
-  margin-left: 70px;
-  margin-right: 70px;
-}
-li.opcje {
-  float: left;
-  display: block;
-  list-style-type: none;
-  background-color: #333;
-  margin: 0 !important;
-  font-size: 20px;
-  padding: 10px 16px;
-}
-
-ul.nav {
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
-  position: relative;
-  margin: 0 !important;
-}
-div {
-  padding: 0;
-} */

@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.s1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  position: relative;
+}
 ul {
   list-style: none;
   display: flex;
@@ -45,7 +52,7 @@ h3 {
   color: #6b6e70;
   margin-bottom: 20px;
 }
-li {
+/* li {
   list-style: none;
   font-weight: bold;
   font-size: 20px;
@@ -79,4 +86,4 @@ ul.nav {
 }
 div {
   padding: 0;
-}
+} */

@@ -3,15 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 ul {
   list-style: none;
   display: flex;
   flex-direction: row;
 }
 
-/* nav li {
-  flex-basis: 25%;
-} */
+nav li {
+  text-align: center;
+  flex-basis: 50%;
+}
 
 nav a {
   display: block;

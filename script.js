@@ -49,9 +49,6 @@ function buildProfile(user) {
         <ul class="list-group">
           <li class="list-group-item">Email: ${user.email}</li>
         </ul>
-        <ul class="list-group">
-          <li class="list-group-item">Płeć: ${user.gender}</li>
-        </ul>
       `;
   document.getElementById("profile").innerHTML = profile;
 }

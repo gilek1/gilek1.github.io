@@ -48,7 +48,7 @@ function buildProfile(user) {
         <h3>Cześć ${user.name}!</h3>
         <h3>Twoje ID: ${user.id}</h3>
         <h3>Twój email: ${user.email}</h3>
-        <img src="${user.picture.data.url}"/>
+        <div><img src="${user.picture.data.url}"/></div>
       `;
   document.getElementById("profile").innerHTML = profile;
 }

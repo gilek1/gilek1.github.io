@@ -1,7 +1,50 @@
-<! DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta
+      name="description"
+      content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Programowanie w Internecie</title>
+    <style media="screen">
+      #fb-btn {
+        margin: 15px;
+        text-align: center;
+      }
+      #heading {
+        color: azure;
+      }
+      #witaj {
+        color: beige;
+      }
+      #profile,
+      #logout {
+        display: none;
+      }
+    </style>
+  </head>
   <body>
-    <h1>Witaj świecie</h1>
-    <p>Jestem hostowany na stronach GitHub.</p>
+    <div>fejs loguje</div>
+
+    <a href="http://mateuszgil.cba.pl/">Strona Główna</a>
+
+    <a id="logout" href="#" onclick="logout()">Wyloguj</a>
+    <fb:login-button
+      id="fb-btn"
+      scope="public_profile,email"
+      onlogin="checkLoginState();"
+    >
+    </fb:login-button>
+
+    <div id="profile"></div>
+
+    <script src="script.js"></script>
   </body>
 </html>

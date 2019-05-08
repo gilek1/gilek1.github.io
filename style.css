@@ -8,10 +8,11 @@ body {
 li::selection {
   background: rgba(255, 190, 142, 0.77);
 }
-h1 {
-  color: rgba(61, 43, 199, 0.83);
-  font-weight: 600;
-  text-shadow: 1px 1px grey;
+h2 {
+  font-size: 44px;
+  font-weight: 400;
+  color: #6b6e70;
+  margin-bottom: 20px;
 }
 li {
   color: aliceblue;
@@ -58,18 +59,4 @@ ul.nav {
 }
 div {
   padding: 0;
-  /* padding-inline-start: 0 !important; */
-}
-a:link {
-  text-decoration: none;
-  color: blanchedalmond;
-}
-a:visited {
-  color: rgba(255, 255, 255, 0.83);
-}
-a:hover {
-  color: rgba(61, 43, 199, 0.83);
-}
-a:active {
-  color: #9191c6;
 }

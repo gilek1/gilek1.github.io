@@ -45,9 +45,9 @@ function testAPI() {
 
 function buildProfile(user) {
   let profile = `
-        <h3 id="witaj">Witaj ${user.name}!</h3>
+        <h3 id="witaj">Cześć ${user.name}!</h3>
         <ul class="list-group">
-          <li class="list-group-item">Email: ${user.email}</li>
+          <li class="list-group-item">Twój email: ${user.email}</li>
         </ul>
       `;
   document.getElementById("profile").innerHTML = profile;

@@ -20,9 +20,6 @@ nav li {
   flex-basis: 50%;
 }
 
-.przycisk {
-  text-align: center;
-}
 nav a {
   display: block;
   flex-grow: 1;

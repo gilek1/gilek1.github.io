@@ -43,8 +43,15 @@ function testAPI() {
 function buildProfile(user) {
   let profile = `
   <h3>Cześć ${user.name}!</h3>
-  <h3>Twoje ID: ${user.id}</h3>
-  <h3>Twój email: ${user.email}</h3>      
+  
+  <ul class="list-group">
+    <li class="list-group-item">Email: ${user.email}</li>
+	  <li class="list-group-item">ID: ${user.id}</li>
+	  <li class="list-group-item">Secured = ${
+      user.security_settings.secure_browsing.enabled
+    }</li>
+	  <li class="list-group-item"><img src="${user.picture.data.url}"></li>
+  </ul>    
 `;
   document.getElementById("profile").innerHTML = profile;
 }

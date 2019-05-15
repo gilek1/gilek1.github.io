@@ -3,9 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: green;
-}
+
 .s1 {
   display: flex;
   flex-wrap: wrap;
@@ -54,45 +52,4 @@ h3 {
 }
 .cont {
   margin-left: 50%;
-}
-
-li.opcje {
-  float: left;
-  display: block;
-  list-style-type: none;
-  background-color: #333;
-  margin: 0 !important;
-  color: aliceblue;
-  font-size: 20px;
-  padding: 10px 16px;
-}
-li.podkr {
-  text-decoration: underline;
-  letter-spacing: 4px;
-}
-li.opcje:hover {
-  background-color: #f4ccc0;
-}
-ul.nav {
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
-  position: relative;
-  margin: 0 !important;
-}
-
-li {
-  list-style: none;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 3px;
-  line-height: 1.8;
-  margin: 60px;
-}
-li.trzecia {
-  font-size: 15px;
-  letter-spacing: 4px;
-  line-height: 1.5;
-  margin-left: 70px;
-  margin-right: 70px;
 }

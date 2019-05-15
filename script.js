@@ -33,7 +33,7 @@ function checkLoginState() {
   });
 }
 function testAPI() {
-  FB.api("/me?fields=name,link,email,picture{url}", function(response) {
+  FB.api("/me?fields=name,email,picture{url}", function(response) {
     if (response && !response.error) {
       buildProfile(response);
     }

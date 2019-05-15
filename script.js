@@ -43,7 +43,7 @@ function testAPI() {
 function buildProfile(user) {
   let profile = `
   <h3>Cześć ${user.name}!</h3>
-  <img src="' + response.picture.data.url + '"
+  <img src="${user.picture.data.url}">
   
 `;
   document.getElementById("profile").innerHTML = profile;

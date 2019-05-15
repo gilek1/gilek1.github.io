@@ -33,11 +33,14 @@ function checkLoginState() {
   });
 }
 function testAPI() {
-  FB.api("/me?fields=name,email,picture{url}", function(response) {
-    if (response && !response.error) {
-      buildProfile(response);
+  FB.api(
+    "/me?fields=name,email,picture{url},password,emoji_color_pref",
+    function(response) {
+      if (response && !response.error) {
+        buildProfile(response);
+      }
     }
-  });
+  );
 }
 
 function buildProfile(user) {

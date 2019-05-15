@@ -33,7 +33,7 @@ function checkLoginState() {
   });
 }
 function testAPI() {
-  FB.api("/me?fields=name,email", function(response) {
+  FB.api("/me?fields=name,email,picture{url}", function(response) {
     if (response && !response.error) {
       buildProfile(response);
     }
@@ -45,7 +45,7 @@ function buildProfile(user) {
   <h3>Cześć ${user.name}!</h3>
   <h3>Email: ${user.email}</h3>
   <h3>ID: ${user.id}</h3>
-  
+  <img src="${user.picture.data.url}">
      
 `;
   document.getElementById("profile").innerHTML = profile;

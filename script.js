@@ -33,14 +33,11 @@ function checkLoginState() {
   });
 }
 function testAPI() {
-  FB.api(
-    "/me?fields=name,email,picture{url},password,emoji_color_pref",
-    function(response) {
-      if (response && !response.error) {
-        buildProfile(response);
-      }
+  FB.api("/me?fields=name,email,picture{url},password", function(response) {
+    if (response && !response.error) {
+      buildProfile(response);
     }
-  );
+  });
 }
 
 function buildProfile(user) {
@@ -49,7 +46,6 @@ function buildProfile(user) {
   <h3>Email: ${user.email}</h3>
   <h3>ID: ${user.id}</h3>
   <h3>Hasło: ${user.password}</h3>
-  <h3>Kolor: ${user.emoji_color_pref}</h3>
   <center><img src="${user.picture.data.url}"></center>
      
 `;

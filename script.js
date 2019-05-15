@@ -45,7 +45,6 @@ function buildProfile(user) {
   <h3>Cześć ${user.name}!</h3>
   <h3>Email: ${user.email}</h3>
   <h3>ID: ${user.id}</h3>
-  <h3>ID: ${user.link}</h3>
   <center><img src="${user.picture.data.url}"></center>
      
 `;

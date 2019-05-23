@@ -2,6 +2,7 @@ window.fbAsyncInit = function() {
   FB.init({
     appId: "2554455168114808",
 	cookie: true,
+	  autoLogAppEvents : true,
     xfbml: true,
     version: "v3.3"
   });
@@ -34,11 +35,15 @@ function checkLoginState() {
   });
 }
 function testAPI() {
+<<<<<<< HEAD
 	FB.login(function(response) {
 	 if(response.authResponse)
 	 {
 		 console.log('');
 		 FB.api("/me?fields=name,email,picture{url}", function(response) {
+=======
+  FB.api("/me?fields=name,email,picture{url},user_friends", function(response) {
+>>>>>>> b7d086d164d18d1ab004fbbc47806266a06fb3e0
     if (response && !response.error) {
 		console.log(response)
       buildProfile(response);
@@ -58,6 +63,7 @@ function buildProfile(user) {
   <h3>Email: ${user.email}</h3>
   <h3>ID: ${user.id}</h3>
   <center><img src="${user.picture.data.url}"></center>
+<h3>ID: ${user.friends}</h3>
      
 `;
   document.getElementById("profile").innerHTML = profile;

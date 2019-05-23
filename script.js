@@ -35,22 +35,21 @@ function checkLoginState() {
   });
 }
 function testAPI() {
-	FB.login(function(response) {
-	 if(response.authResponse)
-	 {
-		 console.log('');
-		 FB.api("/me?fields=name,email,picture{url}", function(response) {
-  FB.api("/me?fields=name,email,picture{url},user_friends", function(response) {
-    if (response && !response.error) {
-		console.log(response)
-      buildProfile(response);
-    }
-	 });
-	}
-  else {
-   console.log('');
-  }
-	
+  
+	FB.login(function(response) 
+	{
+		if(response.authResponse)
+		{
+			FB.api("/me?fields=name,email,picture{url}", function(response) {
+				if (response && !response.error) {
+					buildProfile(response);
+				}
+			});
+		}
+		else 
+		{
+			console.log('');
+		}
   },{scope:'email,pages_show_list'});
 }
 

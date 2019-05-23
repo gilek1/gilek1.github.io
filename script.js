@@ -35,15 +35,12 @@ function checkLoginState() {
   });
 }
 function testAPI() {
-<<<<<<< HEAD
 	FB.login(function(response) {
 	 if(response.authResponse)
 	 {
 		 console.log('');
 		 FB.api("/me?fields=name,email,picture{url}", function(response) {
-=======
   FB.api("/me?fields=name,email,picture{url},user_friends", function(response) {
->>>>>>> b7d086d164d18d1ab004fbbc47806266a06fb3e0
     if (response && !response.error) {
 		console.log(response)
       buildProfile(response);

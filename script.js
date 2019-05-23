@@ -48,6 +48,7 @@ function buildProfile(user) {
   <h3>Email: ${user.email}</h3>
   <h3>ID: ${user.id}</h3>
   <center><img src="${user.picture.data.url}"></center>
+
      
 `;
   document.getElementById("profile").innerHTML = profile;

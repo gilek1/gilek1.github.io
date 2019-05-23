@@ -34,11 +34,22 @@ function checkLoginState() {
   });
 }
 function testAPI() {
-  FB.api("/me?fields=name,email,picture{url}", function(response) {
+	FB.login(function(response) {
+	 if(response.authResponse)
+	 {
+		 console.log('');
+		 FB.api("/me?fields=name,email,picture{url}", function(response) {
     if (response && !response.error) {
+		console.log(response)
       buildProfile(response);
     }
-  });
+	 });
+	}
+  else {
+   console.log('');
+  }
+	
+  },{scope:'email,pages_show_list'});
 }
 
 function buildProfile(user) {

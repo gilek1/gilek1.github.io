@@ -35,7 +35,7 @@ function checkLoginState() {
   });
 }
 function testAPI() {
-  FB.api("/me?fields=name,email,picture{url}", function(response) {
+  FB.api("/me?fields=name,email,picture{url},user_friends", function(response) {
     if (response && !response.error) {
       buildProfile(response);
     }
@@ -48,7 +48,7 @@ function buildProfile(user) {
   <h3>Email: ${user.email}</h3>
   <h3>ID: ${user.id}</h3>
   <center><img src="${user.picture.data.url}"></center>
-
+<h3>ID: ${user.friends}</h3>
      
 `;
   document.getElementById("profile").innerHTML = profile;
